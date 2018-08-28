@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: Azure Storage
 x-complete: 1
@@ -28,20 +27,6 @@ paths:
           description: OK
       tags:
       - Managers
-  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers:
-    get:
-      summary: Managers List By Resource Group
-      description: Retrieves all the managers in a resource group.
-      operationId: Managers_ListByResourceGroup
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagers-get
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Resource Group
   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}:
     get:
       summary: Managers Get
@@ -184,48 +169,6 @@ paths:
           description: OK
       tags:
       - Managers
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/listActivationKey
-  : post:
-      summary: Managers Get Activation Key
-      description: Returns the activation key of the manager.
-      operationId: Managers_GetActivationKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamelistactivationkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Activation Key
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/listPrivateEncryptionKey
-  : post:
-      summary: Managers Get Private Encryption Key
-      description: Returns the symmetric encrypted private encryption key of the manager.
-      operationId: Managers_GetPrivateEncryptionKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamelistprivateencryptionkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Private Encryption Key
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/listPublicEncryptionKey
-  : post:
-      summary: Managers Get Public Encryption Key
-      description: Returns the symmetric encrypted public encryption key of the manager.
-      operationId: Managers_GetPublicEncryptionKey
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagersmanagernamelistpublicencryptionkey-post
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Public Encryption Key
   ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/regenerateActivationKey
   : post:
       summary: Managers Regenerate Activation Key
@@ -240,4 +183,3 @@ paths:
           description: OK
       tags:
       - Managers
----

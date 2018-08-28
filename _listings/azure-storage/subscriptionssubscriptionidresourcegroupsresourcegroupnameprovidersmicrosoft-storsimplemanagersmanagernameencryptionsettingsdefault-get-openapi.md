@@ -29,20 +29,6 @@ paths:
           description: OK
       tags:
       - Managers
-  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers:
-    get:
-      summary: Managers List By Resource Group
-      description: Retrieves all the managers in a resource group.
-      operationId: Managers_ListByResourceGroup
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-storsimplemanagers-get
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managers Resource Group
   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}:
     get:
       summary: Managers Get
